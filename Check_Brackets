@@ -1,0 +1,69 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Stack<Character> stack = new Stack<Character>();
+	    
+
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("enter string");
+	    String str = sc.nextLine();
+	    int len = str.length();
+	    
+	    for(int i=0;i<len;i++){
+	        char s = str.charAt(i);
+	        
+	        if(s=='['|| s=='{'||s=='('){
+	            stack.push(s);
+	        }
+	        if(s==']'||s=='}'||s==')'){
+	            stack.pop();
+	        }
+	    }
+	    
+	    if(stack.isEmpty()){
+	        System.out.println("balanced");
+	        System.out.println(str);
+	    }
+	    else{
+	        System.out.println("unbalanced");
+	        System.out.println(stack);
+	        if(stack.contains('(')){
+	            str= str+')' ;
+	        }
+	           if(stack.contains('{')){
+	            str= str+'}' ;
+	        }
+	           if(stack.contains('[')){
+	            str= str+']' ;
+	        }
+	        
+	        System.out.println(str);
+	        
+	    }
+	}
+}
+
+
+
+OUTPUT :
+enter string
+[()
+unbalanced
+[[]
+[()]
+
+enter string
+{()()}
+balanced
+{()()}
