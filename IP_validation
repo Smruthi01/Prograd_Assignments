@@ -1,1 +1,24 @@
+public class Ip_Validate {
 
+	public boolean ValidateIp(String ip) {
+    System.out.println("Enter Ip");
+    String ip;
+		String IpStr[] = ip.split("[.]", 0);
+		
+		if(IpStr.length>3) 
+				return false;
+			
+	for (int i = 0; i < 3; i++) {
+				int ipvalue = Integer.parseInt(IpStr[i]);
+				if (ipvalue < 0 || ipvalue > 255) {
+					return false;
+				}
+			}
+	if (Integer.parseInt(IP[3]) == 255 || Integer.parseInt(IpStr[3]) == 0)
+				return false;
+			else
+				return true;
+		} 
+	}
+
+}
