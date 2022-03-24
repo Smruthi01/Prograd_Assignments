@@ -1,0 +1,27 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+
+public class  ValidIpTesting{
+  
+  @Test
+	public void verficationTrue() {
+		ValidIpTesting  res=new ValidIpTesting();
+		assertTrue(res.ValidateIpv4Address("1.1.1.1"));
+		assertTrue(res.ValidateIpv4Address("192.168.1.1"));
+		assertTrue(res.ValidateIpv4Address("10.0.0.1"));
+	  System.out.println("valid ip");
+  }
+  
+  @Test
+	public void verificationFalse() {
+			ValidIpTesting  res2 =new ValidIpTesting();
+		assertFalse(res2.ValidateIpv4Address("0.0.0.0"));
+		assertFalse(res2.ValidateIpv4Address("255.255.255.255"));
+		System.out.println("Not valid ip");
+	}
+  
+  
+  }
