@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+    <style>
+        .btn{
+            height: 30px;
+            width: 200px;
+            padding: 5px;
+            border-radius: 5;
+            color: white;
+          
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            animation-name: anim;
+            animation-duration: 4s;
+        }
+        @keyframes anim {
+            from{
+                background-color: blueviolet;
+            }to{
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>Even Handling</h3>
+    <p>Onclick</p>
+    <p onclick="Changecolor()" id="click">click_Me</p>
+
+    <button class="btn" onmousedown="Changebgcolor(this)" onmouseup="ChangeBlue(this)">Changr_BG_Color</button>
+
+    <input oninput="alert('Hello')" placeholder="greet">Give Your Greeting</body><br>
+    <input type="text" value="CopyMe" onCopy="Copy()">
+    <div onclick="">
+
+    </div>
+    
+    <script>
+        function Changecolor(){
+            document.getElementById("click").style.color = "blue";
+        }
+        function Changebgcolor(obj){
+        obj.style.backgroundColor = "#127";
+        }
+        function ChangeBlue(obj){
+            obj.style.backgroundColor="#5267"
+        }
+        function Changetext(){
+
+        }
+    </script>
+</body>
+</html>

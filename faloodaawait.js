@@ -1,0 +1,1 @@
+//inside a async u can give many await..these awaits r executed in synchrously...1st burger shld be ready thn bought

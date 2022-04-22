@@ -1,0 +1,21 @@
+html{
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.calculator{
+  border-radius: 5;
+  height: 500px;
+  width:500px ;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  background-color: dimgrey;
+}
+.calc-keys{
+  display: grid;
+
+}

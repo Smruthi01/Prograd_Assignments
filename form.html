@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+
+  if (x == "") {
+    alert("Kindly fill the details");
+    return false;
+  }else{
+    alert("Details recorded");
+  let x = document.forms["detailsForm"]["fname"]["fnumber"]["fname"].value;
+    localStorage.setItem("Details",x);
+ 
+  window.location="detail.html"; 
+  }
+ 
+}
+</script>
+</head>
+<body>
+
+<h2>Details</h2>
+
+<form name="detailsForm" action="/detail.html" onsubmit="validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  Number:<input type="number" name="fnumber">
+  Age:<input type="number" name="fage">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

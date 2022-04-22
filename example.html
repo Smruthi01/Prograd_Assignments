@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        :root{
+            --height:200px;
+            --width:200px;
+        }
+        h2{
+            background-color: blue;
+            text-align: center;
+            color: white;
+            font-size: medium;
+        }
+        #gradient{
+            height: auto;
+            width: auto;
+            background-color: red;
+ 
+            background-image: repeating conic-gradient(red,yellow,orange,url('girl.jpg'));
+        }
+        #grad2{
+         height: 150px;
+         width: 200px;
+         background-image: radial-gradient(ellipse,violet,pink, purple);
+         height: var(--height);
+         width:var(--width);
+}
+    </style>
+
+</head
+<body>
+    <link rel="stylesheet" href="style.scss">
+
+    <h1 style="color: brown; font-weight: bold;" >This is example for INLINE CSS</h1>
+    <hr>
+    <h2>This is example for INTERNAL CSS</h2>
+    <hr>
+    <h3>
+        This is example for EXTERNAL CSS
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic commodi voluptates tempora veritatis cum, neque sint! P
+        raesentium adipisci magnam assumenda possimus repellendus aliquam! Magnam possimus tenetur itaque amet magni.
+  
+    </h3>
+    <h1> Example for gradient</h1>
+    <div id="gradient">
+    
+    </div>
+    <h1> Example for radial gradient</h1>
+   <div id="grad2"></div>
+   <h3>using var we can set default values or standars set of height width and other props</h3>
+</body>
+</html>
